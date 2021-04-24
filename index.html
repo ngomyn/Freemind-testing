@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="./mystyle/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./mystyle/style.css" />
+    <script src="./Javascipts/myscripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <title>Freemind</title>
+  </head>
+  <body onload="RunApp()">
+    <div class="container" style="margin-top: 5vh">
+      <div
+        class="alert alert-success"
+        role="alert"
+        style="display: none; text-align: center"
+        id="success"
+      ></div>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        style="display: none; text-align: center"
+        id="fail"
+      ></div>
+      <div class="cv-form">
+        <form id="fb-form">
+          <div class="card mb-3">
+            <img
+              src="./images/Screenshot_2021-04-23_131106-removebg-preview.png"
+              alt="Card image cap"
+              style="max-width: 300px; margin: 0 auto"
+            />
+            <div class="card-body">
+              <h5 class="card-title" style="text-align: center">
+                Hãy gửi CV của bạn cho chúng tôi
+              </h5>
+            </div>
+          </div>
+          <div class="form-item" class="needs-validation" novalidate>
+            <div class="form-group row">
+              <label for="inputName3" class="col-sm-3 col-form-label"
+                ><b>Tên của bạn</b></label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputName3"
+                  placeholder="Ví dụ : Nguyễn Văn A"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputTel3" class="col-sm-3 col-form-label"
+                ><b>Số điện thoại</b></label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="inputTel3"
+                  placeholder="Số điện thoại liên lạc"
+                  minlength="10"
+                  maxlength="12"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="selectPosition" class="col-sm-3 col-form-label"
+                ><b>Vị trí</b></label
+              >
+              <div class="col-sm-9">
+                <select
+                  name="selectPosition"
+                  id="selectPosition"
+                  class="custom-select"
+                  required
+                >
+                  <option value="">Chọn vị trí cần ứng tuyển</option>
+                  <option value="Front-end Developer">
+                    Front-end Developer
+                  </option>
+                  <option value="Back-end Developer">Back-end Developer</option>
+                  <option value="Data Analyst">Data Analyst</option>
+                  <option value="Technician Consultant">
+                    Technician Consultant
+                  </option>
+                </select>
+                <div class="invalid-feedback">
+                  Vui lòng chọn vị trí ứng tuyển.
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="FormControlTextarea3" class="col-sm-3 col-form-label"
+                ><b>Kinh nghiệm làm việc</b></label
+              >
+              <div class="col-sm-9">
+                <textarea
+                  class="form-control"
+                  id="FormControlTextarea3"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-sm-3 col-form-label"></div>
+              <div class="col-sm-9">
+                <label
+                  id="label-file"
+                  for="exampleFormControlFile3"
+                  style="cursor: pointer"
+                  ><i class="fa fa-file" aria-hidden="true"></i> Đính kèm hình
+                  ảnh
+                </label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="exampleFormControlFile3"
+                  style="display: none"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-sm-3 col-form-label"
+                ><b>Email</b></label
+              >
+              <div class="col-sm-9">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputEmail3"
+                  placeholder="Ex : contact@freemind.vn"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="container" style="text-align: center">
+                <input
+                  type="submit"
+                  class="btn btn-primary col-sm-8"
+                  id="sub-form"
+                  value="Gửi CV cho Freemind"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
