@@ -30,7 +30,6 @@ function postForm() {
         picture : image.slice(-1).pop(),
         email : $('#inputEmail3').val()
     }
-    console.log(applyData);
     $.ajax({
         method: "POST",
         url: urlFreemind,
