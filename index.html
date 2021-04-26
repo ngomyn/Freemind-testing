@@ -21,7 +21,7 @@
     <title>Freemind</title>
   </head>
   <body onload="RunApp()">
-    <div class="container" style="margin-top: 5vh">
+    <div class="container">
       <div
         class="alert alert-success"
         role="alert"
@@ -34,9 +34,10 @@
         style="display: none; text-align: center"
         id="fail"
       ></div>
-      <div class="cv-form">
+      <div class="cv-form" id="id01">
         <form id="fb-form">
           <div class="card mb-3">
+            <span class="close" title="Close Modal">&times;</span>
             <img
               src="./images/Screenshot_2021-04-23_131106-removebg-preview.png"
               alt="Card image cap"
@@ -44,11 +45,11 @@
             />
             <div class="card-body">
               <h5 class="card-title" style="text-align: center">
-                Hãy gửi CV của bạn cho chúng tôi
+                <b>Hãy gửi CV của bạn cho chúng tôi</b>
               </h5>
             </div>
           </div>
-          <div class="form-item" class="needs-validation" novalidate>
+          <div class="form-item">
             <div class="form-group row">
               <label for="inputName3" class="col-sm-3 col-form-label"
                 ><b>Tên của bạn</b></label
@@ -59,7 +60,7 @@
                   class="form-control"
                   id="inputName3"
                   placeholder="Ví dụ : Nguyễn Văn A"
-                  required
+                  name="fullname"
                 />
               </div>
             </div>
@@ -73,9 +74,9 @@
                   class="form-control"
                   id="inputTel3"
                   placeholder="Số điện thoại liên lạc"
+                  name="phone"
                   minlength="10"
                   maxlength="12"
-                  required
                 />
               </div>
             </div>
@@ -88,7 +89,6 @@
                   name="selectPosition"
                   id="selectPosition"
                   class="custom-select"
-                  required
                 >
                   <option value="">Chọn vị trí cần ứng tuyển</option>
                   <option value="Front-end Developer">
@@ -100,9 +100,6 @@
                     Technician Consultant
                   </option>
                 </select>
-                <div class="invalid-feedback">
-                  Vui lòng chọn vị trí ứng tuyển.
-                </div>
               </div>
             </div>
             <div class="form-group row">
@@ -114,7 +111,7 @@
                   class="form-control"
                   id="FormControlTextarea3"
                   rows="3"
-                  required
+                  name="exp"
                 ></textarea>
               </div>
             </div>
@@ -133,8 +130,14 @@
                   type="file"
                   class="form-control-file"
                   id="exampleFormControlFile3"
-                  style="display: none"
+                  name="imagefile"
+                  style="visibility: hidden"
                 />
+                <label
+                  id="label-filename"
+                  for=""
+                  style="font-size: 14px"
+                ></label>
               </div>
             </div>
             <div class="form-group row">
@@ -147,7 +150,7 @@
                   class="form-control"
                   id="inputEmail3"
                   placeholder="Ex : contact@freemind.vn"
-                  required
+                  name="email"
                 />
               </div>
             </div>
@@ -158,6 +161,7 @@
                   class="btn btn-primary col-sm-8"
                   id="sub-form"
                   value="Gửi CV cho Freemind"
+                  disabled
                 />
               </div>
             </div>
